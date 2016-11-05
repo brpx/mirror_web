@@ -11,12 +11,12 @@ class TimeLeftTo extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      years: 0,
-      months: 0,
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
+      years: '',
+      months: '',
+      days: '',
+      hours: '',
+      minutes: '',
+      seconds: '',
     };
   }
 

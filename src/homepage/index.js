@@ -16,6 +16,11 @@ class Homepage extends React.Component {
               Soccer
             </Link>
           </li>
+          <li>
+            <Link to="/timeleft">
+              Time left
+            </Link>
+          </li>
         </ul>
       </div>
     );
