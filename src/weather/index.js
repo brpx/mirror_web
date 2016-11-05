@@ -23,7 +23,9 @@ class Weather extends React.Component {
   }
 
   componentWillMount() {
-    $.ajax(getUri('Lisbon'), {
+    const city = (this.props.params.city || 'lisbon');
+
+    $.ajax(getUri(city), {
       method: 'GET',
     }).done((res) => {
       this.setState({
@@ -52,5 +54,9 @@ class Weather extends React.Component {
     );
   }
 }
+
+Weather.propTypes = {
+  params: React.PropTypes.object,
+};
 
 export default Weather;

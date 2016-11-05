@@ -9,7 +9,7 @@ import Homepage from './homepage';
 const routes = (
   <Route>
     <Route path="/" component={Homepage} />
-    <Route path="/weather" component={Weather} />
+    <Route path="/weather(/:city)" component={Weather} />
     <Route path="/soccer" component={Soccer} />
   </Route>
 );
