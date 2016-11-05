@@ -17,6 +17,8 @@ class Weather extends React.Component {
       min: 0,
       max: 0,
       current: 0,
+      icon: null,
+      description: '',
     };
   }
 
@@ -29,6 +31,8 @@ class Weather extends React.Component {
         min: Math.round(res.main.temp_min),
         max: Math.round(res.main.temp_max),
         current: Math.round(res.main.temp),
+        icon: ['http://openweathermap.org/img/w/', res.weather[0].icon, '.png'].join(''),
+        description: res.weather[0].description,
       });
     });
   }
@@ -40,6 +44,10 @@ class Weather extends React.Component {
         <p>Now: {this.state.current}º C</p>
         <p>Min: {this.state.min}º C</p>
         <p>Max: {this.state.max}º C</p>
+        <p>
+          <span>{this.state.description}</span>
+          <img alt={this.state.description} src={this.state.icon} />
+        </p>
       </div>
     );
   }
