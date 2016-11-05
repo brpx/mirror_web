@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Weather from './weather/';
+import { Router, browserHistory } from 'react-router';
 import './index.css';
+import routes from './routes';
 
 ReactDOM.render(
-  <Weather />,
+  <Router history={browserHistory} routes={routes} />,
   document.getElementById('root')
 );
