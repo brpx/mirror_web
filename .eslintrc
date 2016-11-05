@@ -1,0 +1,14 @@
+{
+  "extends": ["airbnb"],
+  "globals": {
+    it: 1,
+    document: 1,
+    $: 1,
+    window: 1,
+    navigator: 1,
+    MediaRecorder: 1,
+  },
+  "rules": {
+    "react/jsx-filename-extension": 0,
+  }
+}
