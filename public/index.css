@@ -85,17 +85,15 @@ h4{
   font-weight: 700;
 }
 
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
 .none{
   display: none;
 }
 
-.line{
-  display: block;
-  background: #fff;
-  height: 4px;
-  width: 100%;
-  margin: 20px 0;
-}
 
 .container{
   position: absolute;
@@ -117,19 +115,35 @@ h4{
   margin: 0 auto;
 }
 
-.hello .line,
-.you_are .line{
-  display: inline-block;
-  animation: hello_line 4s;
+.instructions{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  font-weight:lighter;
+  font-style: italic;
+  bottom: 100px;
+  width: 100%;
+  font-size: 20px;
+  opacity: 0.7;
 }
 
-.out .hello .line,
-.you_are .hello .line{
-  animation: hello_line_out 2s;
+.line{
+  display: block;
+  background: #fff;
+  height: 4px;
+  width: 100%;
+  margin: 20px 0;
+  display: inline-block;
+  animation: anime_line 4s;
+}
+
+.out .line{
+  animation: anime_line_out 2s;
   width: 0;
 }
 
-@keyframes hello_line {
+@keyframes anime_line {
     0% {
     width: 0;
   }
@@ -138,7 +152,7 @@ h4{
   }
 }
 
-@keyframes hello_line_out {
+@keyframes anime_line_out {
     0% {
     width: 100%;
   }
@@ -150,4 +164,85 @@ h4{
 
 .you_are .line{
   margin: 150px 0;
+}
+
+.vline{
+  background: #fff;
+  width: 4px;
+  height: 100%;
+  margin: 20px 0;
+  display: inline-block;
+  animation: anime_vline 3s;
+}
+
+.out .vline{
+  animation: anime_vline_out 2s;
+  height: 0;
+}
+
+@keyframes anime_vline {
+    0% {
+    height: 0;
+  }
+  50% {
+  height: 0;
+}
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes anime_vline_out {
+    0% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+
+
+
+header{
+  margin-top: 100px
+}
+
+header h3{
+  font-size: 40px;
+}
+
+
+nav{
+    position: absolute;
+    bottom: 300px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    max-width: 500px
+    text-align: center;
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+nav a{
+  display: inline-block;
+  font-size: 50px;
 }
