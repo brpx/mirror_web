@@ -172,7 +172,7 @@ a{
   height: 100%;
   margin: 20px 0;
   display: inline-block;
-  animation: anime_vline 3s;
+  animation: anime_vlin 3s;
 }
 
 .out .vline{
