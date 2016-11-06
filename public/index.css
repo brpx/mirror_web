@@ -85,6 +85,10 @@ h4{
   font-weight: 700;
 }
 
+.none{
+  display: none;
+}
+
 .line{
   display: block;
   background: #fff;
@@ -104,9 +108,46 @@ h4{
   text-align: center;
 }
 .mirror.hello{
+    max-width: 700px;
+}
+.mirror.hello, .mirror.you_are{
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  max-width: 700px;
   margin: 0 auto;
+}
+
+.hello .line,
+.you_are .line{
+  display: inline-block;
+  animation: hello_line 4s;
+}
+
+.out .hello .line,
+.you_are .hello .line{
+  animation: hello_line_out 2s;
+  width: 0;
+}
+
+@keyframes hello_line {
+    0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes hello_line_out {
+    0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+
+.you_are .line{
+  margin: 150px 0;
 }
